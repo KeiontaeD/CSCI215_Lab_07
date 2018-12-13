@@ -9,6 +9,7 @@ function init() {
     marioImage = new Image();
     bgImage = new Image();
     // start Mario Object
+    //-- set attributes
     Mario = {
         x: 200,
         y: 800,
@@ -25,6 +26,7 @@ function init() {
         timerInterval: 10
     };
 //Causes issues?
+    //-- still unfigured
     bgImage.src = "marioBG.jpg";
     draw();
 
@@ -40,6 +42,7 @@ function draw() {
 
     // If you want to display images on the canvas when it is initially
     // loaded, you must do it this way
+    // -- other method didnt work when i tried
     bgImage.onload = function(){
         ctx.drawImage(bgImage, 0, 0);
         ctx.drawImage(marioImage, 100, 615, 50, 80);
@@ -47,11 +50,7 @@ function draw() {
     }
 
 
-    // marioImage.onload = function ()
-    // {
-    // 	ctx.drawImage(marioImage, 100, 615, 50, 80);
-    // };
-
+    /// --- still have to move mario to ground
 
     /////////////////////////////////////////////////////////////////
     var render = function () {
